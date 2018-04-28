@@ -13,10 +13,6 @@
         android:title="setProgressViewEndTarget" />
 
     <item
-        android:id="@+id/setColorSchemeColors"
-        android:title="setColorSchemeColors" />
-
-    <item
         android:id="@+id/setDistanceToTriggerSync"
         android:title="setDistanceToTriggerSync" />
 
