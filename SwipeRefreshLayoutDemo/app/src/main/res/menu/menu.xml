@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/setSize"
+        android:title="setSize" />
+
+    <item
+        android:id="@+id/setProgressViewOffset"
+        android:title="setProgressViewOffset" />
+
+    <item
+        android:id="@+id/setProgressViewEndTarget"
+        android:title="setProgressViewEndTarget" />
+
+    <item
+        android:id="@+id/setColorSchemeColors"
+        android:title="setColorSchemeColors" />
+
+    <item
+        android:id="@+id/setDistanceToTriggerSync"
+        android:title="setDistanceToTriggerSync" />
+
+</menu>
