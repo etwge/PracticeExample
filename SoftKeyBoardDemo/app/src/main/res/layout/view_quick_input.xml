@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_quick_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:divider="@drawable/shape_layout_quick_input_divider"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:layout_height="200dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/button_change_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:src="@drawable/ic_keyboard" />
+
+        <TextView
+            android:id="@+id/button_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:padding="8dp"
+            android:text="@string/complete"
+            android:textColor="@android:color/black" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_quick_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_quick_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_shortcut_content" />
+    </LinearLayout>
+
+</LinearLayout>
