@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	private List<String> obtainList1() {
-		return Arrays.asList("你好吗", "吖222", "what the hell");
+		return Arrays.asList("用户体验好", "界面流畅", "UI美观");
 	}
 	private List<String> obtainList2() {
-		return Arrays.asList("哎呀呀", "吃饭了吗");
+		return Arrays.asList("功能不够丰富", "偶尔出现卡顿现象");
 	}
 }

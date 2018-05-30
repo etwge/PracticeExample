@@ -22,7 +22,7 @@ import java.util.List;
 public class QuickInputEditText extends AppCompatEditText {
 
 	private static final int DEFAULT_QUICK_BAR_HEIGHT    = 40;
-	private static final int DEFAULT_QUICK_LAYOUT_HEIGHT = 200;
+	private static final int DEFAULT_QUICK_LAYOUT_HEIGHT = 260;
 
 	private Context           mContext;
 	private View              mQuickInputView;
@@ -50,6 +50,10 @@ public class QuickInputEditText extends AppCompatEditText {
 					mQuickInputView.setLayoutParams(layoutParams);
 					child.setLayoutParams(layoutParams2);
 				}
+			}else {
+				final int saveKeyBoardHeight = mKeyBoardManager.getSaveKeyBoardHeight(mContext);
+				mQuickLayoutHeight = saveKeyBoardHeight != 0 ? saveKeyBoardHeight + mQuickBarHeight :
+									 (int) (mContext.getResources().getDisplayMetrics().density * DEFAULT_QUICK_LAYOUT_HEIGHT);
 			}
 			changeBoard.setTag(null);
 		}
@@ -59,10 +63,10 @@ public class QuickInputEditText extends AppCompatEditText {
 		super(context, attrs);
 		mContext = context;
 		mKeyBoardManager = new KeyBoardManager();
-		mKeyBoardManager.addOnSoftKeyBoardVisibleListener((Activity) context, listener);
+		mKeyBoardManager.addOnSoftKeyBoardVisibleListener((Activity) mContext, listener);
 
-		mQuickBarHeight = (int) (context.getResources().getDisplayMetrics().density * DEFAULT_QUICK_BAR_HEIGHT);
-		final int saveKeyBoardHeight = mKeyBoardManager.getSaveKeyBoardHeight(context);
+		mQuickBarHeight = (int) (mContext.getResources().getDisplayMetrics().density * DEFAULT_QUICK_BAR_HEIGHT);
+		final int saveKeyBoardHeight = mKeyBoardManager.getSaveKeyBoardHeight(mContext);
 		mQuickLayoutHeight = saveKeyBoardHeight != 0 ? saveKeyBoardHeight + mQuickBarHeight :
 							 (int) (context.getResources().getDisplayMetrics().density * DEFAULT_QUICK_LAYOUT_HEIGHT);
 		initView();
@@ -101,11 +105,10 @@ public class QuickInputEditText extends AppCompatEditText {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		requestFocus();
-		requestFocusFromTouch();
 		if (event.getActionMasked() == MotionEvent.ACTION_UP && mQuickInputView != null && mQuickInputView.getParent() == null) {
+			requestFocus();
+			requestFocusFromTouch();
 			addQuickInputView();
-
 		}
 		return true;
 	}
@@ -120,6 +123,14 @@ public class QuickInputEditText extends AppCompatEditText {
 			}
 		}
 		return handle || super.onKeyDown(keyCode, event);
+	}
+
+	@Override
+	public void onWindowFocusChanged(boolean hasWindowFocus) {
+		super.onWindowFocusChanged(hasWindowFocus);
+		if (!hasWindowFocus) {
+			KeyboardUtils.closeKeyBoard(QuickInputEditText.this, mContext);
+		}
 	}
 
 	private void addQuickInputView() {
