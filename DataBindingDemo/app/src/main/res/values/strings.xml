@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DataBindingDemo</string>
+    <string name="basic_operation">基本操作</string>
+</resources>
