@@ -1,19 +1,19 @@
 package com.etwge.databindingdemo.data;
 
 public class Poem {
-	private final String mTitle;
-	private final String mContent;
+	private final String title;
+	private final String content;
 
 	public Poem(String title, String content) {
-		mTitle = title;
-		mContent = content;
+		this.title = title;
+		this.content = content;
 	}
 
 	public String getContent() {
-		return mContent;
+		return content;
 	}
 
 	public String getTitle() {
-		return mTitle;
+		return title;
 	}
 }

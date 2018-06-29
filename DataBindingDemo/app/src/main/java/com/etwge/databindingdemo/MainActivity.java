@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.etwge.databindingdemo.databinding.ActivityMainBinding;
 import com.etwge.databindingdemo.ui.BaseOperationActivity;
+import com.etwge.databindingdemo.ui.ObservableFieldChangeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,12 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(MainActivity.this, BaseOperationActivity.class));
+			}
+		});
+		binding.observableFieldChangeButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, ObservableFieldChangeActivity.class));
 			}
 		});
 	}

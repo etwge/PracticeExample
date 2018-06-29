@@ -2,7 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+        <variable
+            name="poem"
+            type="com.etwge.databindingdemo.data.Poem"/>
     </data>
 
     <LinearLayout
@@ -15,12 +17,12 @@
             android:id="@+id/poem_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{}" />
+            android:text="@{poem.title}" />
 
         <TextView
             android:id="@+id/poem_content_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{}" />
+            android:text="@{poem.content}" />
     </LinearLayout>
 </layout>

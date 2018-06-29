@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">DataBindingDemo</string>
     <string name="basic_operation">基本操作</string>
+    <string name="observable_field_change">监听成员变化</string>
+    <string name="volume_plus">音量加</string>
 </resources>

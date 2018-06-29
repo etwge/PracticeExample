@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="class_name">班级名称：</string>
+    <string name="class_monitor">班长：</string>
+</resources>
