@@ -1,4 +1,4 @@
-package com.etwge.classmangement;
+package com.etwge.classmangement.db;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;

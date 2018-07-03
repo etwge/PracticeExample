@@ -7,7 +7,7 @@
     android:padding="8dp">
 
     <TextView
-        android:id="@+id/tv_class_name"
+        android:id="@+id/tv_student_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -15,17 +15,17 @@
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="六（1）版" />
+        tools:text="黄伟" />
 
     <TextView
-        android:id="@+id/tv_class_monitor"
+        android:id="@+id/tv_student_gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="4dp"
-        android:textSize="16sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_class_name"
-        tools:text="班长：秋生" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_student_name"
+        tools:text="女" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,9 +1,9 @@
-package com.etwge.classmangement;
+package com.etwge.classmangement.db;
 
 import android.arch.persistence.room.Room;
 import android.content.Context;
 
-class AppDataBaseManger {
+public class AppDataBaseManger {
 
 	private volatile static AppDatabase ourInstance;
 

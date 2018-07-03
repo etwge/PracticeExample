@@ -2,4 +2,9 @@
     <string name="app_name">My Application</string>
     <string name="class_name">班级名称：</string>
     <string name="class_monitor">班长：</string>
+    <string name="student_name">姓名：</string>
+    <string name="man">男</string>
+    <string name="female">女</string>
+    <string name="class_manage">班级管理</string>
+    <string name="student_manage">学生管理</string>
 </resources>

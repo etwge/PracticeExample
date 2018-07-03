@@ -1,4 +1,4 @@
-package com.etwge.classmangement;
+package com.etwge.classmangement.db;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
