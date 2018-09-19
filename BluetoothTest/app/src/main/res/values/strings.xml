@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BluetoothTest</string>
+    <string name="scan">扫描</string>
+    <string name="connect">连接</string>
+</resources>
